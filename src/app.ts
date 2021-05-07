@@ -7,6 +7,7 @@ const logPath = 'logs.txt';
 const logger = new Logger(logPath);
 
 async function main() {
+    logger.log('Finding Sessions')
     const dateToday = dayjs();
     const dates = [dateToday, dateToday.add(1, 'day'), dateToday.add(2, 'day')];
     const queryDates = dates.map(d => d.format('DD-MM-YYYY'));
@@ -31,7 +32,6 @@ async function main() {
             vaccine: s.vaccine
         }
     })
-
     if (adultSessions.length) {
         logger.log('Vaccine Sessions Found', JSON.stringify(adultSessions, null, 4))
         await sendMail(adultSessions);
@@ -39,3 +39,4 @@ async function main() {
 }
 
 main();
+setInterval(main, 1000 * 60 * 30);
