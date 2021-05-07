@@ -1,0 +1,23 @@
+{
+  "name": "wuhan-virus-vaccination-appointment-tracker-india",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/app.js",
+  "scripts": {
+    "dev": "nodemon dist/app.js"
+  },
+  "keywords": [
+    "Wuhan Virus",
+    "Covid Vaccine Appointment"
+  ],
+  "author": "Nrujal Sharma",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "dayjs": "^1.10.4",
+    "dotenv": "^9.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^15.0.2"
+  }
+}
